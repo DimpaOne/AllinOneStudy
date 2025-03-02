@@ -1,0 +1,14 @@
+{
+  "name": "001-tgbot-todo",
+  "version": "1.0.0",
+  "description": "[2025.02.23] Install git on windows, VSCode, FarManager. next time: 15:20/ TGbot documentation inspection\r         new files? small concept - try",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.66.0"
+  }
+}
