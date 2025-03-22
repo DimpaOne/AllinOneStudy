@@ -1,5 +1,7 @@
 import { add } from "./main.js";
 import { assert, assertEquals } from "https://deno.land/std/testing/asserts.ts";
+import { writeNewTask } from "./main.js";
+import { assertNotEquals } from "https://deno.land/std@0.224.0/assert/assert_not_equals.ts";
 
 Deno.test("test 'add()' function", () => {
   const res = add(5, 7);
@@ -8,7 +10,7 @@ Deno.test("test 'add()' function", () => {
 
 Deno.test("test 'add()' function for string", () => {
   const res = add("privet", "Dima");
-  assertEquals(res, "privet Dima");
+  assertEquals(res, "privetDima");
 });
 
 Deno.test("test priver", () => {
@@ -30,3 +32,36 @@ Deno.test("test objects", () => {
   assertEquals(o1, o2);
   //  assert(o1 === o2)
 });
+
+// Deno.test('writeNewTask', async () =>  {
+//   // Deno.removeSync('tasks.txt')
+//   // await writeNewTask('homework')
+//   const contentOfTheFile = await Deno.readTextFile('tasks.txt')
+//   console.log(contentOfTheFile)
+//   assertEquals(contentOfTheFile, '"hom"ework"')
+// })
+
+async function gg1() {
+  const obg = {
+    city: "Moscow",
+  };
+  Deno.removeSync("tasks.txt");
+  await writeNewTask(obg);
+  const contentOfTheFile = await Deno.readTextFile("tasks.txt");
+  console.log(contentOfTheFile);
+  assertEquals(contentOfTheFile, '"city":"Moscow"');
+}
+
+Deno.test("this is a new test", gg1);
+
+
+Deno.test('testFileContent' , () => {
+  const textInFile = Deno.readTextFileSync('test_data.txt')
+  assertEquals(textInFile, 'string1 /n string2')
+})
+
+
+Deno.test("maths", () => {
+  const result = 7 + 2;
+  assertEquals(result, 9)
+})
