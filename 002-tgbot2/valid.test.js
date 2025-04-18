@@ -67,30 +67,14 @@ Deno.test("maths", () => {
 })
 
 
-function calc(a,b) {
-  if(operation === 'add')
-}
+ 
 
-let hour = 10
-if(hour >= 6 && hour < 12) {
-  console.log('good morning')
-}
-else if(hour>= 12 && hour <18) {
-  console.log('good afternoon')
-}
-else {
-  console.log('good evening')
-}
-Deno.test("test mornningg greetings", () => {
-  assertEquals(greet(6), 'good morning')
-}
+// Deno.test("test mornningg greetings", ()) => {
+//   assertEquals(greet(6), 'good morning')
+// }
+//https://chatgpt.com/share/67f97145-bd1c-8003-b46e-661e6d2b3347
 
-Deno.test("test afternooon greetings", () => {}
-  assertEquals(greet(12), 'good afternoon')
-})
 
-Deno.test("test good evening", () => {
-  assertEquals(name()
-}
 
-//https://chatgpt.com/share/67f97145-bd1c-8003-b46e-661e6d2b3347 
+
+ 
